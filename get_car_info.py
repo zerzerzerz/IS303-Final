@@ -1,5 +1,5 @@
-from selenium import webdriver
-from utils.utils import get_car_info, get_car_info2, load_json
+from utils.crawl import get_car_info, get_car_info2
+from utils.utils import load_json
 from tqdm import tqdm
 import pandas as pd
 import warnings
