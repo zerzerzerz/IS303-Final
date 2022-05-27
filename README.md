@@ -9,3 +9,5 @@
   - 根据id查询二手车详细信息
 - `pre_process.ipynb`
   - 数据清洗，格式转换，关键词提取
+- `dataset.py`
+  - 数据的归一化在dataset里面实现了
