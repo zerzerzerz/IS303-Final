@@ -8,6 +8,7 @@ from dataset.dataset import MyDataset
 from torch.utils.data import DataLoader
 from os.path import join, isfile
 from matplotlib import pyplot as plt
+from sklearn.metrics import r2_score
 
 
 def get_args():
@@ -69,6 +70,7 @@ def run(mode,epoch,model,dataloader,optimizer,ck_dir,logger,args):
     enable_grad = (mode == "train")
     with torch.set_grad_enabled(enable_grad):
         epoch_loss = 0
+        epoch_r2 = 0
         for count, (feature, title, price) in tqdm(enumerate(dataloader)):
             feature = feature.to(args.device)
             title = title.to(args.device)
@@ -79,11 +81,13 @@ def run(mode,epoch,model,dataloader,optimizer,ck_dir,logger,args):
                 optimizer.step()
                 optimizer.zero_grad()
             epoch_loss += loss.item()
+            epoch_r2 += r2_score(price.detach().cpu(), price_pred.detach().cpu())
         epoch_loss /= (count+1)
-        logger.log('Epoch=%d, loss=%.6f'%(epoch,epoch_loss))
+        epoch_r2 /= (count+1)
+        logger.log('Epoch=%d, loss=%.6f, r2=%.6f'%(epoch,epoch_loss,epoch_r2))
         if epoch % args.save_ck_epoch_gap == 0:
             save_model(model, join(ck_dir,f'epoch_{epoch}.pt'), args.device)
-        return epoch_loss
+        return epoch_loss, epoch_r2
 
 
 if __name__ == "__main__":
@@ -120,30 +124,48 @@ if __name__ == "__main__":
 
     # run epochs
     best_eval_loss = 1e12
-    loss_record = {
-        "train": [],
-        "eval": []
+    record = {
+        "mse": {
+            "train": [],
+            "eval": []
+        },
+        "r2": {
+            "train": [],
+            "eval": []
+        }
+
     }
     for epoch in tqdm(range(1,args.num_epoch+1)):
         if args.train:
-            train_loss = run("train", epoch, model, train_loader, optimizer, ck_dir, train_logger, args)
-            loss_record['train'].append(train_loss)
+            train_loss, train_r2 = run("train", epoch, model, train_loader, optimizer, ck_dir, train_logger, args)
+            record['mse']['train'].append(train_loss)
+            record['r2']['train'].append(train_r2)
 
-        eval_loss = run("test", epoch, model, test_loader, None, ck_dir, test_logger, args)
-        loss_record['eval'].append(eval_loss)
+        eval_loss, eval_r2 = run("test", epoch, model, test_loader, None, ck_dir, test_logger, args)
+        record['mse']['eval'].append(eval_loss)
+        record['r2']['eval'].append(eval_r2)
         if eval_loss < best_eval_loss:
             best_eval_loss = eval_loss
             save_model(model, join(ck_dir,'best.pt'), args.device)
 
     # save
-    plt.plot(loss_record['train'],c='r',label='train')
-    plt.plot(loss_record['eval'],c='b',label='eval')
+    plt.plot(record['mse']['train'],c='r',label='train')
+    plt.plot(record['mse']['eval'],c='b',label='eval')
     plt.legend(loc='upper right')
     plt.xlabel('epoch')
-    plt.ylabel('loss')
+    plt.ylabel('MSE')
     plt.grid(which='both')
-    plt.savefig(join(fig_dir, 'loss.png'))
+    plt.savefig(join(fig_dir, 'mse.png'))
     plt.close()
-    save_json(loss_record, join(base, 'loss.json'))
+
+    plt.plot(record['r2']['train'],c='r',label='train')
+    plt.plot(record['r2']['eval'],c='b',label='eval')
+    plt.legend(loc='upper left')
+    plt.xlabel('epoch')
+    plt.ylabel('$R^2$')
+    plt.grid(which='both')
+    plt.savefig(join(fig_dir, 'r2.png'))
+    plt.close()
+    save_json(record, join(base, 'record.json'))
     save_model(model, join(ck_dir,'final.pt'), args.device)
 

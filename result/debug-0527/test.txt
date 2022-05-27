@@ -1,4 +1,4 @@
-2022-05-27 14:04:21
+2022-05-27 15:19:46
 Loading dataset...
 Loading model...
 MLP2(
@@ -45,103 +45,103 @@ MLP2(
     (9): Softplus(beta=1, threshold=20)
   )
 )
-Epoch=1, loss=1.078341
-Epoch=2, loss=0.918605
-Epoch=3, loss=0.849706
-Epoch=4, loss=0.761597
-Epoch=5, loss=0.742358
-Epoch=6, loss=0.672960
-Epoch=7, loss=0.664575
-Epoch=8, loss=0.683956
-Epoch=9, loss=0.679193
-Epoch=10, loss=0.651473
-Epoch=11, loss=0.616083
-Epoch=12, loss=0.623628
-Epoch=13, loss=0.607738
-Epoch=14, loss=0.643856
-Epoch=15, loss=0.622246
-Epoch=16, loss=0.625507
-Epoch=17, loss=0.589032
-Epoch=18, loss=0.603078
-Epoch=19, loss=0.624201
-Epoch=20, loss=0.615365
-Epoch=21, loss=0.609724
-Epoch=22, loss=0.606983
-Epoch=23, loss=0.616035
-Epoch=24, loss=0.623921
-Epoch=25, loss=0.610873
-Epoch=26, loss=0.587251
-Epoch=27, loss=0.574506
-Epoch=28, loss=0.583515
-Epoch=29, loss=0.577330
-Epoch=30, loss=0.576366
-Epoch=31, loss=0.589898
-Epoch=32, loss=0.583059
-Epoch=33, loss=0.648100
-Epoch=34, loss=0.633383
-Epoch=35, loss=0.607791
-Epoch=36, loss=0.604964
-Epoch=37, loss=0.596697
-Epoch=38, loss=0.614880
-Epoch=39, loss=0.554887
-Epoch=40, loss=0.554254
-Epoch=41, loss=0.584789
-Epoch=42, loss=0.553673
-Epoch=43, loss=0.556022
-Epoch=44, loss=0.552321
-Epoch=45, loss=0.576320
-Epoch=46, loss=0.537875
-Epoch=47, loss=0.590052
-Epoch=48, loss=0.611396
-Epoch=49, loss=0.578916
-Epoch=50, loss=0.567211
-Epoch=51, loss=0.586707
-Epoch=52, loss=0.586203
-Epoch=53, loss=0.584960
-Epoch=54, loss=0.573625
-Epoch=55, loss=0.548298
-Epoch=56, loss=0.564266
-Epoch=57, loss=0.581850
-Epoch=58, loss=0.568494
-Epoch=59, loss=0.577477
-Epoch=60, loss=0.551795
-Epoch=61, loss=0.549515
-Epoch=62, loss=0.560529
-Epoch=63, loss=0.581553
-Epoch=64, loss=0.576878
-Epoch=65, loss=0.570714
-Epoch=66, loss=0.563658
-Epoch=67, loss=0.570389
-Epoch=68, loss=0.551927
-Epoch=69, loss=0.547592
-Epoch=70, loss=0.571853
-Epoch=71, loss=0.578872
-Epoch=72, loss=0.557339
-Epoch=73, loss=0.603803
-Epoch=74, loss=0.589981
-Epoch=75, loss=0.602225
-Epoch=76, loss=0.543565
-Epoch=77, loss=0.613287
-Epoch=78, loss=0.562360
-Epoch=79, loss=0.596018
-Epoch=80, loss=0.558053
-Epoch=81, loss=0.588177
-Epoch=82, loss=0.578849
-Epoch=83, loss=0.571621
-Epoch=84, loss=0.568732
-Epoch=85, loss=0.573160
-Epoch=86, loss=0.605151
-Epoch=87, loss=0.575085
-Epoch=88, loss=0.573229
-Epoch=89, loss=0.607296
-Epoch=90, loss=0.569309
-Epoch=91, loss=0.556511
-Epoch=92, loss=0.562189
-Epoch=93, loss=0.560613
-Epoch=94, loss=0.561967
-Epoch=95, loss=0.577005
-Epoch=96, loss=0.534064
-Epoch=97, loss=0.549529
-Epoch=98, loss=0.540514
-Epoch=99, loss=0.550096
-Epoch=100, loss=0.601721
+Epoch=1, loss=1.078341, r2=-0.039103
+Epoch=2, loss=0.918605, r2=0.123280
+Epoch=3, loss=0.849706, r2=0.192634
+Epoch=4, loss=0.761597, r2=0.267738
+Epoch=5, loss=0.742358, r2=0.292061
+Epoch=6, loss=0.672960, r2=0.359705
+Epoch=7, loss=0.664575, r2=0.366516
+Epoch=8, loss=0.683956, r2=0.358368
+Epoch=9, loss=0.679193, r2=0.355847
+Epoch=10, loss=0.651473, r2=0.379597
+Epoch=11, loss=0.616083, r2=0.413950
+Epoch=12, loss=0.623628, r2=0.411545
+Epoch=13, loss=0.607738, r2=0.423233
+Epoch=14, loss=0.643856, r2=0.383172
+Epoch=15, loss=0.622246, r2=0.412611
+Epoch=16, loss=0.625507, r2=0.407099
+Epoch=17, loss=0.589032, r2=0.438521
+Epoch=18, loss=0.603078, r2=0.424866
+Epoch=19, loss=0.624201, r2=0.409823
+Epoch=20, loss=0.615365, r2=0.410109
+Epoch=21, loss=0.609724, r2=0.418214
+Epoch=22, loss=0.606983, r2=0.421088
+Epoch=23, loss=0.616035, r2=0.416148
+Epoch=24, loss=0.623921, r2=0.409881
+Epoch=25, loss=0.610873, r2=0.415914
+Epoch=26, loss=0.587251, r2=0.439485
+Epoch=27, loss=0.574506, r2=0.453232
+Epoch=28, loss=0.583515, r2=0.445204
+Epoch=29, loss=0.577330, r2=0.445330
+Epoch=30, loss=0.576366, r2=0.440981
+Epoch=31, loss=0.589898, r2=0.439406
+Epoch=32, loss=0.583059, r2=0.445702
+Epoch=33, loss=0.648100, r2=0.390488
+Epoch=34, loss=0.633383, r2=0.395838
+Epoch=35, loss=0.607791, r2=0.421801
+Epoch=36, loss=0.604964, r2=0.419831
+Epoch=37, loss=0.596697, r2=0.427715
+Epoch=38, loss=0.614880, r2=0.414273
+Epoch=39, loss=0.554887, r2=0.472029
+Epoch=40, loss=0.554254, r2=0.471671
+Epoch=41, loss=0.584789, r2=0.444248
+Epoch=42, loss=0.553673, r2=0.469720
+Epoch=43, loss=0.556022, r2=0.466358
+Epoch=44, loss=0.552321, r2=0.471059
+Epoch=45, loss=0.576320, r2=0.448971
+Epoch=46, loss=0.537875, r2=0.481370
+Epoch=47, loss=0.590052, r2=0.436948
+Epoch=48, loss=0.611396, r2=0.426110
+Epoch=49, loss=0.578916, r2=0.450270
+Epoch=50, loss=0.567211, r2=0.458056
+Epoch=51, loss=0.586707, r2=0.444698
+Epoch=52, loss=0.586203, r2=0.438050
+Epoch=53, loss=0.584960, r2=0.437729
+Epoch=54, loss=0.573625, r2=0.452012
+Epoch=55, loss=0.548298, r2=0.473946
+Epoch=56, loss=0.564266, r2=0.462439
+Epoch=57, loss=0.581850, r2=0.448242
+Epoch=58, loss=0.568494, r2=0.455174
+Epoch=59, loss=0.577477, r2=0.449334
+Epoch=60, loss=0.551795, r2=0.477129
+Epoch=61, loss=0.549515, r2=0.473693
+Epoch=62, loss=0.560529, r2=0.461170
+Epoch=63, loss=0.581553, r2=0.447775
+Epoch=64, loss=0.576878, r2=0.448899
+Epoch=65, loss=0.570714, r2=0.457256
+Epoch=66, loss=0.563658, r2=0.459286
+Epoch=67, loss=0.570389, r2=0.457622
+Epoch=68, loss=0.551927, r2=0.472472
+Epoch=69, loss=0.547592, r2=0.472987
+Epoch=70, loss=0.571853, r2=0.454502
+Epoch=71, loss=0.578872, r2=0.451923
+Epoch=72, loss=0.557339, r2=0.471105
+Epoch=73, loss=0.603803, r2=0.430801
+Epoch=74, loss=0.589981, r2=0.444291
+Epoch=75, loss=0.602225, r2=0.428798
+Epoch=76, loss=0.543565, r2=0.480786
+Epoch=77, loss=0.613287, r2=0.422210
+Epoch=78, loss=0.562360, r2=0.460796
+Epoch=79, loss=0.596018, r2=0.436918
+Epoch=80, loss=0.558053, r2=0.468753
+Epoch=81, loss=0.588177, r2=0.433734
+Epoch=82, loss=0.578849, r2=0.446343
+Epoch=83, loss=0.571621, r2=0.445558
+Epoch=84, loss=0.568732, r2=0.455590
+Epoch=85, loss=0.573160, r2=0.456311
+Epoch=86, loss=0.605151, r2=0.427416
+Epoch=87, loss=0.575085, r2=0.452006
+Epoch=88, loss=0.573229, r2=0.454849
+Epoch=89, loss=0.607296, r2=0.432945
+Epoch=90, loss=0.569309, r2=0.461810
+Epoch=91, loss=0.556511, r2=0.474024
+Epoch=92, loss=0.562189, r2=0.469334
+Epoch=93, loss=0.560613, r2=0.465800
+Epoch=94, loss=0.561967, r2=0.466399
+Epoch=95, loss=0.577005, r2=0.456013
+Epoch=96, loss=0.534064, r2=0.484243
+Epoch=97, loss=0.549529, r2=0.474296
+Epoch=98, loss=0.540514, r2=0.482083
+Epoch=99, loss=0.550096, r2=0.471384
+Epoch=100, loss=0.601721, r2=0.436549
