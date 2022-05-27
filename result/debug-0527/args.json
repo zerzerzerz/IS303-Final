@@ -12,8 +12,9 @@
     "only_eval": false,
     "input_dim": 4,
     "num_embedding": 63,
-    "embedding_dim": 32,
-    "hidden_dim": 64,
+    "embedding_dim": 10,
+    "hidden_dim": 32,
     "num_layer": 4,
+    "dropout": 0.2,
     "train": true
 }

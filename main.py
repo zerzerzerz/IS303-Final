@@ -1,7 +1,6 @@
-from cProfile import label
 from torch.optim import Adam
 from tqdm import tqdm
-from model.model import MLP
+from model.model import MLP2 as Model
 import torch
 from utils.utils import load_json, Logger, save_json, mkdir, setup_seed
 from argparse import ArgumentParser
@@ -29,9 +28,10 @@ def get_args():
     # model settings
     parser.add_argument('--input_dim', type=int, default=4)
     parser.add_argument('--num_embedding', type=int, default=len(load_json('data/car_type_refinement.json')))
-    parser.add_argument('--embedding_dim', type=int, default=32)
-    parser.add_argument('--hidden_dim', type=int, default=64)
+    parser.add_argument('--embedding_dim', type=int, default=10)
+    parser.add_argument('--hidden_dim', type=int, default=32)
     parser.add_argument('--num_layer', type=int, default=4)
+    parser.add_argument('--dropout', type=float, default=0.2)
 
     args = parser.parse_args()
     args.train = not args.only_eval
@@ -57,7 +57,7 @@ def get_model(args):
     else:
         pass
 
-    return MLP(args.input_dim, args.num_embedding, args.embedding_dim, args.hidden_dim, args.num_layer)
+    return Model(args.input_dim, args.num_embedding, args.embedding_dim, args.hidden_dim, args.num_layer, args.dropout)
 
 
 def save_model(model,path,device):
@@ -113,6 +113,7 @@ if __name__ == "__main__":
     test_logger.log("Loading model...")
     model = get_model(args)
     model.to(args.device)
+    test_logger.log(str(model))
 
     # create optimizer
     optimizer = Adam(model.parameters(),lr=args.lr) if args.train else None

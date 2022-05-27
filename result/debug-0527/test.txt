@@ -1,103 +1,147 @@
-2022-05-27 13:39:11
+2022-05-27 14:04:21
 Loading dataset...
 Loading model...
-Epoch=1, loss=1.014039
-Epoch=2, loss=0.913050
-Epoch=3, loss=0.808161
-Epoch=4, loss=0.724412
-Epoch=5, loss=0.707434
-Epoch=6, loss=0.626751
-Epoch=7, loss=0.609667
-Epoch=8, loss=0.627390
-Epoch=9, loss=0.579523
-Epoch=10, loss=0.596184
-Epoch=11, loss=0.574512
-Epoch=12, loss=0.575761
-Epoch=13, loss=0.583253
-Epoch=14, loss=0.581251
-Epoch=15, loss=0.587187
-Epoch=16, loss=0.580355
-Epoch=17, loss=0.576366
-Epoch=18, loss=0.556508
-Epoch=19, loss=0.561892
-Epoch=20, loss=0.551122
-Epoch=21, loss=0.543488
-Epoch=22, loss=0.554296
-Epoch=23, loss=0.573635
-Epoch=24, loss=0.550630
-Epoch=25, loss=0.574414
-Epoch=26, loss=0.581822
-Epoch=27, loss=0.559424
-Epoch=28, loss=0.552807
-Epoch=29, loss=0.573671
-Epoch=30, loss=0.548074
-Epoch=31, loss=0.570762
-Epoch=32, loss=0.541515
-Epoch=33, loss=0.553865
-Epoch=34, loss=0.559738
-Epoch=35, loss=0.556107
-Epoch=36, loss=0.572990
-Epoch=37, loss=0.552294
-Epoch=38, loss=0.548254
-Epoch=39, loss=0.572565
-Epoch=40, loss=0.548853
-Epoch=41, loss=0.565937
-Epoch=42, loss=0.553437
-Epoch=43, loss=0.571287
-Epoch=44, loss=0.576460
-Epoch=45, loss=0.537506
-Epoch=46, loss=0.551671
-Epoch=47, loss=0.549893
-Epoch=48, loss=0.552081
-Epoch=49, loss=0.557257
-Epoch=50, loss=0.550358
-Epoch=51, loss=0.573871
-Epoch=52, loss=0.554224
-Epoch=53, loss=0.544333
-Epoch=54, loss=0.561803
-Epoch=55, loss=0.580640
-Epoch=56, loss=0.554129
-Epoch=57, loss=0.556636
-Epoch=58, loss=0.572217
-Epoch=59, loss=0.545416
-Epoch=60, loss=0.548166
-Epoch=61, loss=0.573231
-Epoch=62, loss=0.560374
-Epoch=63, loss=0.550457
-Epoch=64, loss=0.534511
-Epoch=65, loss=0.537162
-Epoch=66, loss=0.555957
-Epoch=67, loss=0.545908
-Epoch=68, loss=0.598509
-Epoch=69, loss=0.547823
-Epoch=70, loss=0.547327
-Epoch=71, loss=0.568144
-Epoch=72, loss=0.537274
-Epoch=73, loss=0.556430
-Epoch=74, loss=0.537001
-Epoch=75, loss=0.550121
-Epoch=76, loss=0.539579
-Epoch=77, loss=0.559274
-Epoch=78, loss=0.551695
-Epoch=79, loss=0.548766
-Epoch=80, loss=0.557756
-Epoch=81, loss=0.540286
-Epoch=82, loss=0.550012
-Epoch=83, loss=0.546202
-Epoch=84, loss=0.549787
-Epoch=85, loss=0.544916
-Epoch=86, loss=0.544070
-Epoch=87, loss=0.544308
-Epoch=88, loss=0.546220
-Epoch=89, loss=0.551467
-Epoch=90, loss=0.543578
-Epoch=91, loss=0.551258
-Epoch=92, loss=0.549981
-Epoch=93, loss=0.543007
-Epoch=94, loss=0.549026
-Epoch=95, loss=0.542154
-Epoch=96, loss=0.552198
-Epoch=97, loss=0.546513
-Epoch=98, loss=0.553810
-Epoch=99, loss=0.545750
-Epoch=100, loss=0.542232
+MLP2(
+  (title_embedding): Embedding(63, 10)
+  (loss_fn): MSELoss()
+  (model): Sequential(
+    (0): Linear(in_features=14, out_features=32, bias=True)
+    (1): LeakyReLU(negative_slope=0.2)
+    (2): BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (3): Dropout(p=0.2, inplace=False)
+    (4): SkipConnectionBlock(
+      (skip_block): Sequential(
+        (0): Linear(in_features=32, out_features=32, bias=True)
+        (1): LeakyReLU(negative_slope=0.2)
+        (2): BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (5): SkipConnectionBlock(
+      (skip_block): Sequential(
+        (0): Linear(in_features=32, out_features=32, bias=True)
+        (1): LeakyReLU(negative_slope=0.2)
+        (2): BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (6): SkipConnectionBlock(
+      (skip_block): Sequential(
+        (0): Linear(in_features=32, out_features=32, bias=True)
+        (1): LeakyReLU(negative_slope=0.2)
+        (2): BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (7): SkipConnectionBlock(
+      (skip_block): Sequential(
+        (0): Linear(in_features=32, out_features=32, bias=True)
+        (1): LeakyReLU(negative_slope=0.2)
+        (2): BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (8): Linear(in_features=32, out_features=1, bias=True)
+    (9): Softplus(beta=1, threshold=20)
+  )
+)
+Epoch=1, loss=1.078341
+Epoch=2, loss=0.918605
+Epoch=3, loss=0.849706
+Epoch=4, loss=0.761597
+Epoch=5, loss=0.742358
+Epoch=6, loss=0.672960
+Epoch=7, loss=0.664575
+Epoch=8, loss=0.683956
+Epoch=9, loss=0.679193
+Epoch=10, loss=0.651473
+Epoch=11, loss=0.616083
+Epoch=12, loss=0.623628
+Epoch=13, loss=0.607738
+Epoch=14, loss=0.643856
+Epoch=15, loss=0.622246
+Epoch=16, loss=0.625507
+Epoch=17, loss=0.589032
+Epoch=18, loss=0.603078
+Epoch=19, loss=0.624201
+Epoch=20, loss=0.615365
+Epoch=21, loss=0.609724
+Epoch=22, loss=0.606983
+Epoch=23, loss=0.616035
+Epoch=24, loss=0.623921
+Epoch=25, loss=0.610873
+Epoch=26, loss=0.587251
+Epoch=27, loss=0.574506
+Epoch=28, loss=0.583515
+Epoch=29, loss=0.577330
+Epoch=30, loss=0.576366
+Epoch=31, loss=0.589898
+Epoch=32, loss=0.583059
+Epoch=33, loss=0.648100
+Epoch=34, loss=0.633383
+Epoch=35, loss=0.607791
+Epoch=36, loss=0.604964
+Epoch=37, loss=0.596697
+Epoch=38, loss=0.614880
+Epoch=39, loss=0.554887
+Epoch=40, loss=0.554254
+Epoch=41, loss=0.584789
+Epoch=42, loss=0.553673
+Epoch=43, loss=0.556022
+Epoch=44, loss=0.552321
+Epoch=45, loss=0.576320
+Epoch=46, loss=0.537875
+Epoch=47, loss=0.590052
+Epoch=48, loss=0.611396
+Epoch=49, loss=0.578916
+Epoch=50, loss=0.567211
+Epoch=51, loss=0.586707
+Epoch=52, loss=0.586203
+Epoch=53, loss=0.584960
+Epoch=54, loss=0.573625
+Epoch=55, loss=0.548298
+Epoch=56, loss=0.564266
+Epoch=57, loss=0.581850
+Epoch=58, loss=0.568494
+Epoch=59, loss=0.577477
+Epoch=60, loss=0.551795
+Epoch=61, loss=0.549515
+Epoch=62, loss=0.560529
+Epoch=63, loss=0.581553
+Epoch=64, loss=0.576878
+Epoch=65, loss=0.570714
+Epoch=66, loss=0.563658
+Epoch=67, loss=0.570389
+Epoch=68, loss=0.551927
+Epoch=69, loss=0.547592
+Epoch=70, loss=0.571853
+Epoch=71, loss=0.578872
+Epoch=72, loss=0.557339
+Epoch=73, loss=0.603803
+Epoch=74, loss=0.589981
+Epoch=75, loss=0.602225
+Epoch=76, loss=0.543565
+Epoch=77, loss=0.613287
+Epoch=78, loss=0.562360
+Epoch=79, loss=0.596018
+Epoch=80, loss=0.558053
+Epoch=81, loss=0.588177
+Epoch=82, loss=0.578849
+Epoch=83, loss=0.571621
+Epoch=84, loss=0.568732
+Epoch=85, loss=0.573160
+Epoch=86, loss=0.605151
+Epoch=87, loss=0.575085
+Epoch=88, loss=0.573229
+Epoch=89, loss=0.607296
+Epoch=90, loss=0.569309
+Epoch=91, loss=0.556511
+Epoch=92, loss=0.562189
+Epoch=93, loss=0.560613
+Epoch=94, loss=0.561967
+Epoch=95, loss=0.577005
+Epoch=96, loss=0.534064
+Epoch=97, loss=0.549529
+Epoch=98, loss=0.540514
+Epoch=99, loss=0.550096
+Epoch=100, loss=0.601721
