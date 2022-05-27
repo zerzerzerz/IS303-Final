@@ -1,0 +1,178 @@
+2022-05-27 19:01:27
+Loading dataset...
+Loading model...
+MLP2(
+  (title_embedding): Embedding(63, 32)
+  (loss_fn): MSELoss()
+  (model): Sequential(
+    (0): Linear(in_features=36, out_features=64, bias=True)
+    (1): LeakyReLU(negative_slope=0.2)
+    (2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (3): Dropout(p=0.2, inplace=False)
+    (4): SkipConnectionBlock(
+      (skip_block): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): LeakyReLU(negative_slope=0.2)
+        (2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (5): SkipConnectionBlock(
+      (skip_block): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): LeakyReLU(negative_slope=0.2)
+        (2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (6): SkipConnectionBlock(
+      (skip_block): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): LeakyReLU(negative_slope=0.2)
+        (2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (7): SkipConnectionBlock(
+      (skip_block): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): LeakyReLU(negative_slope=0.2)
+        (2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (8): SkipConnectionBlock(
+      (skip_block): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): LeakyReLU(negative_slope=0.2)
+        (2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (9): SkipConnectionBlock(
+      (skip_block): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): LeakyReLU(negative_slope=0.2)
+        (2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (10): SkipConnectionBlock(
+      (skip_block): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): LeakyReLU(negative_slope=0.2)
+        (2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (11): SkipConnectionBlock(
+      (skip_block): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): LeakyReLU(negative_slope=0.2)
+        (2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (12): Linear(in_features=64, out_features=1, bias=True)
+  )
+)
+Epoch=1, loss=0.797627, r2=0.224506
+Epoch=2, loss=0.704243, r2=0.325659
+Epoch=3, loss=0.649513, r2=0.388092
+Epoch=4, loss=0.619068, r2=0.419357
+Epoch=5, loss=0.590394, r2=0.438664
+Epoch=6, loss=0.556142, r2=0.478600
+Epoch=7, loss=0.571834, r2=0.465809
+Epoch=8, loss=0.505291, r2=0.520747
+Epoch=9, loss=0.546168, r2=0.492715
+Epoch=10, loss=0.487793, r2=0.544957
+Epoch=11, loss=0.484238, r2=0.545672
+Epoch=12, loss=0.477162, r2=0.553703
+Epoch=13, loss=0.502614, r2=0.526011
+Epoch=14, loss=0.466275, r2=0.562479
+Epoch=15, loss=0.498166, r2=0.536894
+Epoch=16, loss=0.492470, r2=0.543404
+Epoch=17, loss=0.480028, r2=0.551468
+Epoch=18, loss=0.444225, r2=0.578143
+Epoch=19, loss=0.491275, r2=0.542855
+Epoch=20, loss=0.480358, r2=0.550066
+Epoch=21, loss=0.458767, r2=0.571321
+Epoch=22, loss=0.453393, r2=0.577242
+Epoch=23, loss=0.489310, r2=0.546069
+Epoch=24, loss=0.447386, r2=0.583898
+Epoch=25, loss=0.467092, r2=0.565919
+Epoch=26, loss=0.462979, r2=0.569546
+Epoch=27, loss=0.444353, r2=0.586667
+Epoch=28, loss=0.427715, r2=0.601823
+Epoch=29, loss=0.456471, r2=0.574753
+Epoch=30, loss=0.448463, r2=0.575931
+Epoch=31, loss=0.455107, r2=0.575530
+Epoch=32, loss=0.445192, r2=0.585436
+Epoch=33, loss=0.443680, r2=0.588149
+Epoch=34, loss=0.441257, r2=0.587039
+Epoch=35, loss=0.453575, r2=0.575895
+Epoch=36, loss=0.428710, r2=0.603616
+Epoch=37, loss=0.445466, r2=0.585778
+Epoch=38, loss=0.433433, r2=0.594820
+Epoch=39, loss=0.425609, r2=0.604567
+Epoch=40, loss=0.435862, r2=0.593908
+Epoch=41, loss=0.427296, r2=0.603222
+Epoch=42, loss=0.426740, r2=0.608268
+Epoch=43, loss=0.428990, r2=0.604380
+Epoch=44, loss=0.437349, r2=0.590167
+Epoch=45, loss=0.426537, r2=0.594686
+Epoch=46, loss=0.434982, r2=0.591589
+Epoch=47, loss=0.438361, r2=0.585527
+Epoch=48, loss=0.441904, r2=0.593403
+Epoch=49, loss=0.424585, r2=0.603398
+Epoch=50, loss=0.415309, r2=0.611932
+Epoch=51, loss=0.419595, r2=0.612251
+Epoch=52, loss=0.421519, r2=0.603630
+Epoch=53, loss=0.412767, r2=0.611801
+Epoch=54, loss=0.405637, r2=0.621421
+Epoch=55, loss=0.404968, r2=0.619719
+Epoch=56, loss=0.425166, r2=0.601587
+Epoch=57, loss=0.404774, r2=0.620907
+Epoch=58, loss=0.437930, r2=0.594977
+Epoch=59, loss=0.418550, r2=0.608437
+Epoch=60, loss=0.438017, r2=0.591046
+Epoch=61, loss=0.406556, r2=0.624225
+Epoch=62, loss=0.433438, r2=0.600693
+Epoch=63, loss=0.418609, r2=0.614060
+Epoch=64, loss=0.420327, r2=0.610799
+Epoch=65, loss=0.441132, r2=0.595644
+Epoch=66, loss=0.406455, r2=0.621095
+Epoch=67, loss=0.439032, r2=0.590208
+Epoch=68, loss=0.413571, r2=0.614292
+Epoch=69, loss=0.422487, r2=0.609958
+Epoch=70, loss=0.399924, r2=0.628279
+Epoch=71, loss=0.409141, r2=0.611832
+Epoch=72, loss=0.404526, r2=0.627486
+Epoch=73, loss=0.407006, r2=0.613919
+Epoch=74, loss=0.428514, r2=0.602726
+Epoch=75, loss=0.435556, r2=0.595756
+Epoch=76, loss=0.403315, r2=0.623575
+Epoch=77, loss=0.420642, r2=0.612530
+Epoch=78, loss=0.412742, r2=0.614599
+Epoch=79, loss=0.418637, r2=0.612457
+Epoch=80, loss=0.412476, r2=0.616269
+Epoch=81, loss=0.413494, r2=0.615468
+Epoch=82, loss=0.417007, r2=0.611546
+Epoch=83, loss=0.439690, r2=0.583946
+Epoch=84, loss=0.423371, r2=0.606008
+Epoch=85, loss=0.425294, r2=0.609191
+Epoch=86, loss=0.404117, r2=0.624741
+Epoch=87, loss=0.402783, r2=0.624843
+Epoch=88, loss=0.412826, r2=0.614133
+Epoch=89, loss=0.415861, r2=0.614749
+Epoch=90, loss=0.394828, r2=0.634035
+Epoch=91, loss=0.403371, r2=0.623288
+Epoch=92, loss=0.417816, r2=0.612699
+Epoch=93, loss=0.409078, r2=0.622976
+Epoch=94, loss=0.415066, r2=0.615313
+Epoch=95, loss=0.438598, r2=0.598398
+Epoch=96, loss=0.406318, r2=0.617352
+Epoch=97, loss=0.417733, r2=0.613276
+Epoch=98, loss=0.393529, r2=0.631491
+Epoch=99, loss=0.397331, r2=0.629186
+Epoch=100, loss=0.414143, r2=0.610929

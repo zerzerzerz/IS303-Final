@@ -1,0 +1,370 @@
+2022-05-27 19:00:51
+Loading dataset...
+Loading model...
+MLP2(
+  (title_embedding): Embedding(63, 32)
+  (loss_fn): MSELoss()
+  (model): Sequential(
+    (0): Linear(in_features=36, out_features=64, bias=True)
+    (1): LeakyReLU(negative_slope=0.2)
+    (2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (3): Dropout(p=0.2, inplace=False)
+    (4): SkipConnectionBlock(
+      (skip_block): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): LeakyReLU(negative_slope=0.2)
+        (2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (5): SkipConnectionBlock(
+      (skip_block): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): LeakyReLU(negative_slope=0.2)
+        (2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (6): SkipConnectionBlock(
+      (skip_block): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): LeakyReLU(negative_slope=0.2)
+        (2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (7): SkipConnectionBlock(
+      (skip_block): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): LeakyReLU(negative_slope=0.2)
+        (2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (8): SkipConnectionBlock(
+      (skip_block): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): LeakyReLU(negative_slope=0.2)
+        (2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (9): SkipConnectionBlock(
+      (skip_block): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): LeakyReLU(negative_slope=0.2)
+        (2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (10): SkipConnectionBlock(
+      (skip_block): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): LeakyReLU(negative_slope=0.2)
+        (2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (11): SkipConnectionBlock(
+      (skip_block): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): LeakyReLU(negative_slope=0.2)
+        (2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (12): SkipConnectionBlock(
+      (skip_block): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): LeakyReLU(negative_slope=0.2)
+        (2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (13): SkipConnectionBlock(
+      (skip_block): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): LeakyReLU(negative_slope=0.2)
+        (2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (14): SkipConnectionBlock(
+      (skip_block): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): LeakyReLU(negative_slope=0.2)
+        (2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (15): SkipConnectionBlock(
+      (skip_block): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): LeakyReLU(negative_slope=0.2)
+        (2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (16): SkipConnectionBlock(
+      (skip_block): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): LeakyReLU(negative_slope=0.2)
+        (2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (17): SkipConnectionBlock(
+      (skip_block): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): LeakyReLU(negative_slope=0.2)
+        (2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (18): SkipConnectionBlock(
+      (skip_block): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): LeakyReLU(negative_slope=0.2)
+        (2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (19): SkipConnectionBlock(
+      (skip_block): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): LeakyReLU(negative_slope=0.2)
+        (2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (20): SkipConnectionBlock(
+      (skip_block): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): LeakyReLU(negative_slope=0.2)
+        (2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (21): SkipConnectionBlock(
+      (skip_block): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): LeakyReLU(negative_slope=0.2)
+        (2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (22): SkipConnectionBlock(
+      (skip_block): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): LeakyReLU(negative_slope=0.2)
+        (2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (23): SkipConnectionBlock(
+      (skip_block): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): LeakyReLU(negative_slope=0.2)
+        (2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (24): SkipConnectionBlock(
+      (skip_block): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): LeakyReLU(negative_slope=0.2)
+        (2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (25): SkipConnectionBlock(
+      (skip_block): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): LeakyReLU(negative_slope=0.2)
+        (2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (26): SkipConnectionBlock(
+      (skip_block): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): LeakyReLU(negative_slope=0.2)
+        (2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (27): SkipConnectionBlock(
+      (skip_block): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): LeakyReLU(negative_slope=0.2)
+        (2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (28): SkipConnectionBlock(
+      (skip_block): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): LeakyReLU(negative_slope=0.2)
+        (2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (29): SkipConnectionBlock(
+      (skip_block): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): LeakyReLU(negative_slope=0.2)
+        (2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (30): SkipConnectionBlock(
+      (skip_block): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): LeakyReLU(negative_slope=0.2)
+        (2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (31): SkipConnectionBlock(
+      (skip_block): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): LeakyReLU(negative_slope=0.2)
+        (2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (32): SkipConnectionBlock(
+      (skip_block): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): LeakyReLU(negative_slope=0.2)
+        (2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (33): SkipConnectionBlock(
+      (skip_block): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): LeakyReLU(negative_slope=0.2)
+        (2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (34): SkipConnectionBlock(
+      (skip_block): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): LeakyReLU(negative_slope=0.2)
+        (2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (35): SkipConnectionBlock(
+      (skip_block): Sequential(
+        (0): Linear(in_features=64, out_features=64, bias=True)
+        (1): LeakyReLU(negative_slope=0.2)
+        (2): BatchNorm1d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (36): Linear(in_features=64, out_features=1, bias=True)
+  )
+)
+Epoch=1, loss=1.271567, r2=-0.207882
+Epoch=2, loss=0.958798, r2=0.078088
+Epoch=3, loss=0.839682, r2=0.194153
+Epoch=4, loss=0.813537, r2=0.220302
+Epoch=5, loss=0.785633, r2=0.249956
+Epoch=6, loss=0.685582, r2=0.349018
+Epoch=7, loss=0.679775, r2=0.357737
+Epoch=8, loss=0.651434, r2=0.381117
+Epoch=9, loss=0.630835, r2=0.402055
+Epoch=10, loss=0.626903, r2=0.405351
+Epoch=11, loss=0.620011, r2=0.413399
+Epoch=12, loss=0.605900, r2=0.425525
+Epoch=13, loss=0.578652, r2=0.454017
+Epoch=14, loss=0.543541, r2=0.486930
+Epoch=15, loss=0.534097, r2=0.498131
+Epoch=16, loss=0.570073, r2=0.457459
+Epoch=17, loss=0.579549, r2=0.451997
+Epoch=18, loss=0.514566, r2=0.513830
+Epoch=19, loss=0.512582, r2=0.515484
+Epoch=20, loss=0.588515, r2=0.439725
+Epoch=21, loss=0.524446, r2=0.508524
+Epoch=22, loss=0.536039, r2=0.499913
+Epoch=23, loss=0.513954, r2=0.512375
+Epoch=24, loss=0.494310, r2=0.534061
+Epoch=25, loss=0.502546, r2=0.528579
+Epoch=26, loss=0.506746, r2=0.526620
+Epoch=27, loss=0.481465, r2=0.550129
+Epoch=28, loss=0.503783, r2=0.528686
+Epoch=29, loss=0.542783, r2=0.499650
+Epoch=30, loss=0.559256, r2=0.483880
+Epoch=31, loss=0.507690, r2=0.527297
+Epoch=32, loss=0.451665, r2=0.575282
+Epoch=33, loss=0.505710, r2=0.532513
+Epoch=34, loss=0.520069, r2=0.520359
+Epoch=35, loss=0.503268, r2=0.530384
+Epoch=36, loss=0.465592, r2=0.566766
+Epoch=37, loss=0.479208, r2=0.554914
+Epoch=38, loss=0.466879, r2=0.565850
+Epoch=39, loss=0.486092, r2=0.546964
+Epoch=40, loss=0.455763, r2=0.573806
+Epoch=41, loss=0.444322, r2=0.582319
+Epoch=42, loss=0.473739, r2=0.557404
+Epoch=43, loss=0.436765, r2=0.589457
+Epoch=44, loss=0.470728, r2=0.558946
+Epoch=45, loss=0.480628, r2=0.551094
+Epoch=46, loss=0.461702, r2=0.562570
+Epoch=47, loss=0.406712, r2=0.613652
+Epoch=48, loss=0.459100, r2=0.553917
+Epoch=49, loss=0.449935, r2=0.582745
+Epoch=50, loss=0.464061, r2=0.566952
+Epoch=51, loss=0.424966, r2=0.602247
+Epoch=52, loss=0.451411, r2=0.575783
+Epoch=53, loss=0.436858, r2=0.586642
+Epoch=54, loss=0.451659, r2=0.577953
+Epoch=55, loss=0.441062, r2=0.590562
+Epoch=56, loss=0.441246, r2=0.586791
+Epoch=57, loss=0.425621, r2=0.601763
+Epoch=58, loss=0.424102, r2=0.600713
+Epoch=59, loss=0.434104, r2=0.596657
+Epoch=60, loss=0.453679, r2=0.579628
+Epoch=61, loss=0.465057, r2=0.553120
+Epoch=62, loss=0.458455, r2=0.576155
+Epoch=63, loss=0.456424, r2=0.577817
+Epoch=64, loss=0.439776, r2=0.588307
+Epoch=65, loss=0.441131, r2=0.591557
+Epoch=66, loss=0.461068, r2=0.568388
+Epoch=67, loss=0.426743, r2=0.600614
+Epoch=68, loss=0.421998, r2=0.599566
+Epoch=69, loss=0.438341, r2=0.590144
+Epoch=70, loss=0.416552, r2=0.605593
+Epoch=71, loss=0.421493, r2=0.601819
+Epoch=72, loss=0.417970, r2=0.610612
+Epoch=73, loss=0.423901, r2=0.600986
+Epoch=74, loss=0.417936, r2=0.613849
+Epoch=75, loss=0.418245, r2=0.612334
+Epoch=76, loss=0.431172, r2=0.598104
+Epoch=77, loss=0.421233, r2=0.609283
+Epoch=78, loss=0.406127, r2=0.616038
+Epoch=79, loss=0.426466, r2=0.600674
+Epoch=80, loss=0.440630, r2=0.589700
+Epoch=81, loss=0.428596, r2=0.602475
+Epoch=82, loss=0.439371, r2=0.593732
+Epoch=83, loss=0.414474, r2=0.617645
+Epoch=84, loss=0.439159, r2=0.592101
+Epoch=85, loss=0.415737, r2=0.615933
+Epoch=86, loss=0.438740, r2=0.590334
+Epoch=87, loss=0.418959, r2=0.609456
+Epoch=88, loss=0.404759, r2=0.621120
+Epoch=89, loss=0.422812, r2=0.602793
+Epoch=90, loss=0.440131, r2=0.576934
+Epoch=91, loss=0.432100, r2=0.595461
+Epoch=92, loss=0.402090, r2=0.626475
+Epoch=93, loss=0.413047, r2=0.614867
+Epoch=94, loss=0.428841, r2=0.599387
+Epoch=95, loss=0.426166, r2=0.599982
+Epoch=96, loss=0.423931, r2=0.607538
+Epoch=97, loss=0.429127, r2=0.598884
+Epoch=98, loss=0.423669, r2=0.606976
+Epoch=99, loss=0.431111, r2=0.601914
+Epoch=100, loss=0.414231, r2=0.616406
