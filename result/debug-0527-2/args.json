@@ -1,7 +1,7 @@
 {
     "train_dataset": "data/data_train.csv",
     "test_dataset": "data/data_test.csv",
-    "output_dir": "result/debug-0527",
+    "output_dir": "result/debug-0527-2/",
     "checkpoint": "",
     "device": "cuda:0",
     "num_epoch": 100,

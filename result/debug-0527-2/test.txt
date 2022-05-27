@@ -1,0 +1,146 @@
+2022-05-27 18:36:53
+Loading dataset...
+Loading model...
+MLP2(
+  (title_embedding): Embedding(63, 10)
+  (loss_fn): MSELoss()
+  (model): Sequential(
+    (0): Linear(in_features=14, out_features=32, bias=True)
+    (1): LeakyReLU(negative_slope=0.2)
+    (2): BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (3): Dropout(p=0.2, inplace=False)
+    (4): SkipConnectionBlock(
+      (skip_block): Sequential(
+        (0): Linear(in_features=32, out_features=32, bias=True)
+        (1): LeakyReLU(negative_slope=0.2)
+        (2): BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (5): SkipConnectionBlock(
+      (skip_block): Sequential(
+        (0): Linear(in_features=32, out_features=32, bias=True)
+        (1): LeakyReLU(negative_slope=0.2)
+        (2): BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (6): SkipConnectionBlock(
+      (skip_block): Sequential(
+        (0): Linear(in_features=32, out_features=32, bias=True)
+        (1): LeakyReLU(negative_slope=0.2)
+        (2): BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (7): SkipConnectionBlock(
+      (skip_block): Sequential(
+        (0): Linear(in_features=32, out_features=32, bias=True)
+        (1): LeakyReLU(negative_slope=0.2)
+        (2): BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (3): Dropout(p=0.2, inplace=False)
+      )
+    )
+    (8): Linear(in_features=32, out_features=1, bias=True)
+  )
+)
+Epoch=1, loss=1.023870, r2=0.023679
+Epoch=2, loss=0.841986, r2=0.199813
+Epoch=3, loss=0.790588, r2=0.253544
+Epoch=4, loss=0.700674, r2=0.332999
+Epoch=5, loss=0.661923, r2=0.372649
+Epoch=6, loss=0.596341, r2=0.438052
+Epoch=7, loss=0.567865, r2=0.462964
+Epoch=8, loss=0.594939, r2=0.450525
+Epoch=9, loss=0.583326, r2=0.455382
+Epoch=10, loss=0.558239, r2=0.480633
+Epoch=11, loss=0.521699, r2=0.513658
+Epoch=12, loss=0.536924, r2=0.499702
+Epoch=13, loss=0.507215, r2=0.530533
+Epoch=14, loss=0.555541, r2=0.474493
+Epoch=15, loss=0.522144, r2=0.514813
+Epoch=16, loss=0.488455, r2=0.548379
+Epoch=17, loss=0.491032, r2=0.537248
+Epoch=18, loss=0.498588, r2=0.531639
+Epoch=19, loss=0.483147, r2=0.547084
+Epoch=20, loss=0.484691, r2=0.548012
+Epoch=21, loss=0.475722, r2=0.553976
+Epoch=22, loss=0.467074, r2=0.565564
+Epoch=23, loss=0.470112, r2=0.558855
+Epoch=24, loss=0.472291, r2=0.559348
+Epoch=25, loss=0.469294, r2=0.561122
+Epoch=26, loss=0.449004, r2=0.573757
+Epoch=27, loss=0.447501, r2=0.583344
+Epoch=28, loss=0.453574, r2=0.578240
+Epoch=29, loss=0.449985, r2=0.578544
+Epoch=30, loss=0.444347, r2=0.582515
+Epoch=31, loss=0.447874, r2=0.580074
+Epoch=32, loss=0.474613, r2=0.556404
+Epoch=33, loss=0.439118, r2=0.597410
+Epoch=34, loss=0.478122, r2=0.554020
+Epoch=35, loss=0.454735, r2=0.573357
+Epoch=36, loss=0.448158, r2=0.577156
+Epoch=37, loss=0.442039, r2=0.584030
+Epoch=38, loss=0.461091, r2=0.570244
+Epoch=39, loss=0.439298, r2=0.593385
+Epoch=40, loss=0.428913, r2=0.601390
+Epoch=41, loss=0.445108, r2=0.583183
+Epoch=42, loss=0.429930, r2=0.598314
+Epoch=43, loss=0.445873, r2=0.582859
+Epoch=44, loss=0.436101, r2=0.592964
+Epoch=45, loss=0.438453, r2=0.588212
+Epoch=46, loss=0.426747, r2=0.601639
+Epoch=47, loss=0.408734, r2=0.619912
+Epoch=48, loss=0.440517, r2=0.593690
+Epoch=49, loss=0.437056, r2=0.591562
+Epoch=50, loss=0.429192, r2=0.592738
+Epoch=51, loss=0.447120, r2=0.587215
+Epoch=52, loss=0.439934, r2=0.582692
+Epoch=53, loss=0.451526, r2=0.577169
+Epoch=54, loss=0.414782, r2=0.614141
+Epoch=55, loss=0.408553, r2=0.616312
+Epoch=56, loss=0.425491, r2=0.600730
+Epoch=57, loss=0.398126, r2=0.625601
+Epoch=58, loss=0.425549, r2=0.595360
+Epoch=59, loss=0.433124, r2=0.593852
+Epoch=60, loss=0.425938, r2=0.603944
+Epoch=61, loss=0.422622, r2=0.599651
+Epoch=62, loss=0.403210, r2=0.623908
+Epoch=63, loss=0.442734, r2=0.584021
+Epoch=64, loss=0.420185, r2=0.605276
+Epoch=65, loss=0.425210, r2=0.601474
+Epoch=66, loss=0.412470, r2=0.613388
+Epoch=67, loss=0.414673, r2=0.614417
+Epoch=68, loss=0.404163, r2=0.622476
+Epoch=69, loss=0.415832, r2=0.608278
+Epoch=70, loss=0.426650, r2=0.599682
+Epoch=71, loss=0.421938, r2=0.601709
+Epoch=72, loss=0.426490, r2=0.605361
+Epoch=73, loss=0.429218, r2=0.600029
+Epoch=74, loss=0.425139, r2=0.607920
+Epoch=75, loss=0.438262, r2=0.589801
+Epoch=76, loss=0.403776, r2=0.622337
+Epoch=77, loss=0.405387, r2=0.617578
+Epoch=78, loss=0.409880, r2=0.614204
+Epoch=79, loss=0.428573, r2=0.599751
+Epoch=80, loss=0.416991, r2=0.605202
+Epoch=81, loss=0.410851, r2=0.612287
+Epoch=82, loss=0.430986, r2=0.595741
+Epoch=83, loss=0.426479, r2=0.593919
+Epoch=84, loss=0.426769, r2=0.593716
+Epoch=85, loss=0.448326, r2=0.581601
+Epoch=86, loss=0.450371, r2=0.583108
+Epoch=87, loss=0.433462, r2=0.596558
+Epoch=88, loss=0.440205, r2=0.585265
+Epoch=89, loss=0.425456, r2=0.606446
+Epoch=90, loss=0.424473, r2=0.600999
+Epoch=91, loss=0.402453, r2=0.622954
+Epoch=92, loss=0.406973, r2=0.619342
+Epoch=93, loss=0.431192, r2=0.598451
+Epoch=94, loss=0.410977, r2=0.611377
+Epoch=95, loss=0.443578, r2=0.590126
+Epoch=96, loss=0.427356, r2=0.597967
+Epoch=97, loss=0.424979, r2=0.602160
+Epoch=98, loss=0.423252, r2=0.605412
+Epoch=99, loss=0.438026, r2=0.590869
+Epoch=100, loss=0.445388, r2=0.589013

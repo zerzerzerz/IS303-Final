@@ -33,7 +33,7 @@ class MLP(nn.Module):
             model.append(nn.Dropout(self.dropout))
 
         model.append(nn.Linear(self.hidden_dim, self.output_dim))
-        model.append(nn.Softplus())
+        # model.append(nn.Softplus())
 
         self.model = nn.Sequential(*model)
         self.loss_fn = nn.MSELoss(reduction='mean')
@@ -95,7 +95,7 @@ class MLP2(MLP):
             model.append(SkipConnectionBlock(self.hidden_dim, self.use_bn, self.dropout))
 
         model.append(nn.Linear(self.hidden_dim, self.output_dim))
-        model.append(nn.Softplus())
+        # model.append(nn.Softplus())
 
         self.model = nn.Sequential(*model)
     
