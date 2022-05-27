@@ -19,7 +19,7 @@ def get_args():
     parser.add_argument('--checkpoint', type=str, default='')
     parser.add_argument('--device', type=str, default='cuda:0')
     parser.add_argument('--num_epoch', type=int, default=100)
-    parser.add_argument('--save_ck_epoch_gap', type=int, default=10)
+    parser.add_argument('--save_ck_epoch_gap', type=int, default=50)
     parser.add_argument('--seed', type=int, default=3407)
     parser.add_argument('--batch_size', type=int, default=512)
     parser.add_argument('--lr', type=float, default=1e-3)
@@ -29,9 +29,9 @@ def get_args():
     # model settings
     parser.add_argument('--input_dim', type=int, default=4)
     parser.add_argument('--num_embedding', type=int, default=len(load_json('data/car_type_refinement.json')))
-    parser.add_argument('--embedding_dim', type=int, default=10)
-    parser.add_argument('--hidden_dim', type=int, default=32)
-    parser.add_argument('--num_layer', type=int, default=4)
+    parser.add_argument('--embedding_dim', type=int, default=32)
+    parser.add_argument('--hidden_dim', type=int, default=64)
+    parser.add_argument('--num_layer', type=int, default=100)
     parser.add_argument('--dropout', type=float, default=0.2)
 
     args = parser.parse_args()

@@ -1,0 +1,20 @@
+{
+    "train_dataset": "data/data_train.csv",
+    "test_dataset": "data/data_test.csv",
+    "output_dir": "result/debug-0527-3/",
+    "checkpoint": "",
+    "device": "cuda:0",
+    "num_epoch": 100,
+    "save_ck_epoch_gap": 10,
+    "seed": 3407,
+    "batch_size": 512,
+    "lr": 0.001,
+    "only_eval": false,
+    "input_dim": 4,
+    "num_embedding": 63,
+    "embedding_dim": 32,
+    "hidden_dim": 64,
+    "num_layer": 100,
+    "dropout": 0.2,
+    "train": true
+}
