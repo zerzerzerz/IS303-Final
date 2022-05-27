@@ -1,4 +1,4 @@
-from numpy import var
+from cProfile import label
 from torch.optim import Adam
 from tqdm import tqdm
 from model.model import MLP
@@ -8,19 +8,20 @@ from argparse import ArgumentParser
 from dataset.dataset import MyDataset
 from torch.utils.data import DataLoader
 from os.path import join, isfile
+from matplotlib import pyplot as plt
 
 
 def get_args():
     parser = ArgumentParser()
-    parser.add_argument('--train_dataset', type=str, default='data/data.csv')
-    parser.add_argument('--test_dataset', type=str, default='data/data.csv')
+    parser.add_argument('--train_dataset', type=str, default='data/data_train.csv')
+    parser.add_argument('--test_dataset', type=str, default='data/data_test.csv')
     parser.add_argument('--output_dir', type=str, default='result/debug-0527')
     parser.add_argument('--checkpoint', type=str, default='')
     parser.add_argument('--device', type=str, default='cuda:0')
-    parser.add_argument('--num_epoch', type=int, default=10)
+    parser.add_argument('--num_epoch', type=int, default=100)
     parser.add_argument('--save_ck_epoch_gap', type=int, default=10)
     parser.add_argument('--seed', type=int, default=3407)
-    parser.add_argument('--batch_size', type=int, default=128)
+    parser.add_argument('--batch_size', type=int, default=512)
     parser.add_argument('--lr', type=float, default=1e-3)
     parser.add_argument('--only_eval', action='store_true')
 
@@ -28,8 +29,8 @@ def get_args():
     # model settings
     parser.add_argument('--input_dim', type=int, default=4)
     parser.add_argument('--num_embedding', type=int, default=len(load_json('data/car_type_refinement.json')))
-    parser.add_argument('--embedding_dim', type=int, default=16)
-    parser.add_argument('--hidden_dim', type=int, default=32)
+    parser.add_argument('--embedding_dim', type=int, default=32)
+    parser.add_argument('--hidden_dim', type=int, default=64)
     parser.add_argument('--num_layer', type=int, default=4)
 
     args = parser.parse_args()
@@ -64,7 +65,25 @@ def save_model(model,path,device):
     model.to(device)
 
 
-def run(mode,epoch,model,dataloader,optimizer,ck_dir,logger):
+def run(mode,epoch,model,dataloader,optimizer,ck_dir,logger,args):
+    enable_grad = (mode == "train")
+    with torch.set_grad_enabled(enable_grad):
+        epoch_loss = 0
+        for count, (feature, title, price) in tqdm(enumerate(dataloader)):
+            feature = feature.to(args.device)
+            title = title.to(args.device)
+            price = price.to(args.device)
+            price_pred, loss = model(feature, title, price)
+            if mode == 'train':
+                loss.backward()
+                optimizer.step()
+                optimizer.zero_grad()
+            epoch_loss += loss.item()
+        epoch_loss /= (count+1)
+        logger.log('Epoch=%d, loss=%.6f'%(epoch,epoch_loss))
+        if epoch % args.save_ck_epoch_gap == 0:
+            save_model(model, join(ck_dir,f'epoch_{epoch}.pt'), args.device)
+        return epoch_loss
 
 
 if __name__ == "__main__":
@@ -76,6 +95,8 @@ if __name__ == "__main__":
     mkdir(base)
     ck_dir = join(base,'ck')
     mkdir(ck_dir)
+    fig_dir = join(base, 'fig')
+    mkdir(fig_dir)
 
     # save config
     save_json(vars(args), join(base, 'args.json'))
@@ -97,7 +118,31 @@ if __name__ == "__main__":
     optimizer = Adam(model.parameters(),lr=args.lr) if args.train else None
 
     # run epochs
-    for epoch in tqdm(1,args.num_epoch+1):
-        if args.train
+    best_eval_loss = 1e12
+    loss_record = {
+        "train": [],
+        "eval": []
+    }
+    for epoch in tqdm(range(1,args.num_epoch+1)):
+        if args.train:
+            train_loss = run("train", epoch, model, train_loader, optimizer, ck_dir, train_logger, args)
+            loss_record['train'].append(train_loss)
 
+        eval_loss = run("test", epoch, model, test_loader, None, ck_dir, test_logger, args)
+        loss_record['eval'].append(eval_loss)
+        if eval_loss < best_eval_loss:
+            best_eval_loss = eval_loss
+            save_model(model, join(ck_dir,'best.pt'), args.device)
+
+    # save
+    plt.plot(loss_record['train'],c='r',label='train')
+    plt.plot(loss_record['eval'],c='b',label='eval')
+    plt.legend(loc='upper right')
+    plt.xlabel('epoch')
+    plt.ylabel('loss')
+    plt.grid(which='both')
+    plt.savefig(join(fig_dir, 'loss.png'))
+    plt.close()
+    save_json(loss_record, join(base, 'loss.json'))
+    save_model(model, join(ck_dir,'final.pt'), args.device)
 
