@@ -9,20 +9,23 @@ class MyDataset(Dataset):
         self.csv_path = csv_path
         df = pd.read_csv(self.csv_path)
         self.features = []
+        self.titles = []
         self.prices = []
         for index in df.index:
-            price = df.loc[index,'price']
+            price = float(df.loc[index,'price'])
             feature = torch.from_numpy(
                     df.loc[index,[
                     "change-speed",
                     "kilometer",
                     "shangpai-date",
-                    "standard",
-                    "title"
+                    "standard"
                 ]].to_numpy()
             ).to(torch.float32)
+            title = int(df.loc[index,'title'])
+            self.titles.append(title)
             self.features.append(feature)
             self.prices.append(price)
+
             
         
         # normalize
@@ -40,7 +43,7 @@ class MyDataset(Dataset):
         self.length = len(self.prices)
 
     def __getitem__(self, index):
-        return self.features[index], self.prices[index]
+        return self.features[index], self.titles[index], self.prices[index]
     
     
     def __len__(self):
@@ -51,7 +54,8 @@ if __name__ == '__main__':
     dataset = MyDataset()
     dataloader = DataLoader(dataset,2)
 
-    for x,y in dataloader:
-        print(x.shape)
-        print(y.shape)
+    for feature, title, price in dataloader:
+        print(feature.shape)
+        print(title.shape)
+        print(price.shape)
         break
