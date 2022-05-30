@@ -2,6 +2,14 @@
 ## Project Code for IS303 Final Project
 ## Report
 - [LaTeX for SJTU](https://latex.sjtu.edu.cn/read/zhdcfcgndpzv)
+## Envs
+- Python >=3.6
+- PyTorch
+- requests
+- selenium
+- sklearn
+- lxml
+- pandas
 ## Run
 - `python get_car_type.py`
   - 获取二手车的品牌信息
