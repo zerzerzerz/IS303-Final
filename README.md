@@ -10,6 +10,7 @@
 - sklearn
 - lxml
 - pandas
+- matplotlib
 ## Run
 - `python get_car_type.py`
   - 获取二手车的品牌信息
